@@ -17,15 +17,15 @@ public class CarDAOImpl implements CarDAO {
     public Car findByPlate(String plate) {
         try {
             String sql = "SELECT * FROM autos WHERE patente = ?";
-            Connection conn = ConnectionProvider.getConnection();
-            PreparedStatement statement = conn.prepareStatement(sql);
+            Connection connection = ConnectionProvider.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, plate);
-            ResultSet resultados = statement.executeQuery();
+            ResultSet result = statement.executeQuery();
 
             Car car = null;
 
-            if (resultados.next()) {
-                car = toCar(resultados);
+            if (result.next()) {
+                car = toCar(result);
             }
 
             return car;

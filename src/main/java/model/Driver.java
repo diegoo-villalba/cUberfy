@@ -5,14 +5,14 @@ public class Driver {
     private Integer license, dateOfAdmission, departureDate;
     private Integer daysWorking;
 
-
-    public Driver(String name, String lastName, String email, Integer license, Integer dateOfAdmission, Integer departureDate) {
+    public Driver(String name, String lastName, String email, Integer license, Integer dateOfAdmission, Integer departureDate, Integer daysWorking) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.license = license;
         this.dateOfAdmission = dateOfAdmission;
         this.departureDate = departureDate;
+        this.daysWorking = daysWorking;
     }
 
     public String getName() {
@@ -80,6 +80,7 @@ public class Driver {
                 ", license=" + license +
                 ", dateOfAdmission=" + dateOfAdmission +
                 ", departureDate=" + departureDate +
+                ", daysWorking=" + daysWorking +
                 '}';
     }
 }
