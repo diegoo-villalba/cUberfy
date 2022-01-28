@@ -2,6 +2,7 @@ package TestsDAO;
 
 import model.Car;
 import org.junit.Assert;
+import org.junit.Test;
 import persistence.commons.ConnectionProvider;
 import persistence.impl.CarDAOImpl;
 
@@ -10,12 +11,12 @@ import java.sql.SQLException;
 
 public class CarDAOImplTest {
 
-    @org.junit.Test
+    @Test
     public void testConnectionOk() throws SQLException {
         Connection connection = ConnectionProvider.getConnection();
         Assert.assertNotNull(connection);
     }
-    @org.junit.Test
+    @Test
     public void testFindByPlate() {
         CarDAOImpl carDAO = new CarDAOImpl();
 

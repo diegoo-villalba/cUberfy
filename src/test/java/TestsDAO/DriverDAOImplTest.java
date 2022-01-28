@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 public class DriverDAOImplTest {
 
-    @org.junit.Test
+    @Test
     public void testConnectionOk() throws SQLException {
         Connection connection = ConnectionProvider.getConnection();
         Assert.assertNotNull(connection);

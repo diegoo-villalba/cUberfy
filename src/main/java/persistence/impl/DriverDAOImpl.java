@@ -58,7 +58,8 @@ public class DriverDAOImpl implements DriverDAO {
     public int delete(Driver driver) {
         return 0;
     }
-    //Driver(String name, String lastName, String email, Integer license, Integer dateOfAdmission, Integer departureDate)
+
+
     public static Driver toDriver(ResultSet resultSet){
         try {
             String name = resultSet.getString("nombre");
